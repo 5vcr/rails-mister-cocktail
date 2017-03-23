@@ -1,5 +1,6 @@
 <h2>Add ingredient to <%= @cocktail.name %></h2>
 <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.error_notification %>
   <%= f.input :ingredient_id, collection: @ingredients %>
   <%= f.input :description, label:"Quantity" %>
   <%= f.submit "Add ", class: "btn btn-primary" %>
